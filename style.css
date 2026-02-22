@@ -1,0 +1,114 @@
+body{
+margin:0;
+font-family:monospace;
+background:linear-gradient(135deg,#000814,#001d3d,#000);
+color:white;
+}
+
+/* AUTH BOX */
+.auth-box{
+width:300px;
+margin:120px auto;
+display:flex;
+flex-direction:column;
+gap:10px;
+background:rgba(0,0,0,0.8);
+padding:25px;
+border-radius:10px;
+box-shadow:0 0 20px cyan;
+}
+
+.auth-box input, .auth-box button{
+padding:8px;
+border:none;
+border-radius:5px;
+}
+
+.auth-box button{
+background:cyan;
+cursor:pointer;
+}
+
+.hidden{
+display:none;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+}
+
+header h1{
+margin:0;
+text-shadow:0 0 15px cyan;
+}
+
+.logout{
+background:red;
+color:white;
+border:none;
+padding:8px 15px;
+cursor:pointer;
+}
+
+.main{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:20px;
+}
+
+.canvas-area canvas{
+background:#111;
+border:3px solid #333;
+}
+
+.controls{
+display:flex;
+flex-direction:column;
+gap:10px;
+width:200px;
+}
+
+.controls button,
+.controls select,
+.controls input{
+padding:8px;
+background:#111;
+color:white;
+border:1px solid cyan;
+cursor:pointer;
+}
+
+.controls button:hover{
+background:cyan;
+color:black;
+}
+
+.neon canvas{
+box-shadow: 0 0 30px cyan;
+}
+
+.neon{
+background: radial-gradient(circle at center, #001d3d, #000);
+}
+
+.pixel canvas{
+image-rendering: pixelated;
+image-rendering: crisp-edges;
+transform: scale(1.02);
+}
+
+.preview-area{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:10px;
+}
+
+.preview-area canvas{
+background:#111;
+border:2px solid cyan;
+}

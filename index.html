@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tetris Art Studio Pro+</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- AUTH -->
+<div id="authContainer" class="auth-box">
+<h2>Tetris Art Studio</h2>
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
+<button onclick="register()">Register</button>
+<button onclick="login()">Login</button>
+<p id="authMsg"></p>
+</div>
+
+<!-- APP -->
+<div id="app" class="hidden">
+
+<header>
+<h1>🧱 TETRIS ART STUDIO PRO+</h1>
+<button onclick="logout()" class="logout">Logout</button>
+</header>
+
+<div class="main">
+
+<div class="main">
+
+<div class="preview-area">
+    <h3>Current Block</h3>
+    <canvas id="previewCanvas" width="120" height="120"></canvas>
+</div>
+
+<div class="canvas-area">
+    <canvas id="canvas" width="600" height="600"></canvas>
+</div>
+
+<div class="controls">
+
+<select id="blockType"></select>
+
+<label>Block Color</label>
+<input type="color" id="colorPicker" value="#00ffff">
+
+<label>Background</label>
+<input type="color" id="bgPicker" value="#111111">
+
+<label>Mode</label>
+<select id="modeSelect">
+<option value="free">Free Mode</option>
+<option value="gravity">Gravity Mode</option>
+</select>
+
+<button onclick="rotateCurrent()">Rotate</button>
+<button onclick="undo()">Undo</button>
+<button onclick="redo()">Redo</button>
+<button onclick="saveDesign()">Save</button>
+<button onclick="resetCanvas()">Reset</button>
+<button onclick="exportPNG()">Export PNG</button>
+<button onclick="loadProject()">Load Project</button>
+<button onclick="applyAsBackground()">Apply As Background</button>
+<button onclick="toggleMusic()">Music</button>
+<button onclick="toggleNeon()">Neon</button>
+<button onclick="togglePixel()">Pixel</button>
+
+
+</div>
+</div>
+</div>
+
+<audio id="bgMusic" loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
